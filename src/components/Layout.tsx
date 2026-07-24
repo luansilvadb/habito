@@ -9,19 +9,29 @@ interface LayoutProps {
 
 export function Layout({ children, currentTab, onTabChange }: LayoutProps) {
   const [time, setTime] = useState(new Date());
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Só retorna false se o usuário escolheu explicitamente 'light'
+    // null (nunca escolheu) ou 'dark' → true (dark mode padrão)
+    const saved = localStorage.getItem('theme-preference');
+    return saved !== 'light';
+  });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
-    // Set initial class
-    document.documentElement.classList.add('dark');
+    // Sincroniza a classe .dark com o estado inicial
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     return () => clearInterval(timer);
   }, []);
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
+    localStorage.setItem('theme-preference', newMode ? 'dark' : 'light');
     if (newMode) {
       document.documentElement.classList.add('dark');
     } else {

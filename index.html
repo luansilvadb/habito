@@ -8,6 +8,16 @@
       content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data: blob: https:; font-src 'self' data:;"
     />
     <title>Prática Deliberada</title>
+    <script>
+      // Aplica dark mode imediatamente para evitar flash de tema claro (FOIT).
+      // A preferência 'light' só é respeitada se o usuário a escolheu explicitamente.
+      (function() {
+        var theme = localStorage.getItem('theme-preference');
+        if (theme !== 'light') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -2,12 +2,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html.dark, html.dark body {
+/* Tema escuro como padrão do sistema */
+:root {
+  color-scheme: dark;
+}
+
+html, body {
   background-color: #09090b;
   color: #fafafa;
 }
 
-html, body {
+/* Tema claro — aplicado apenas quando a classe .dark NÃO está presente */
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html:not(.dark), html:not(.dark) body {
   background-color: #f4f4f5;
   color: #09090b;
 }
