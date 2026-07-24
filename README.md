@@ -43,4 +43,4 @@ dist/            # Build de producao (Vite)
 
 - **Frontend**: React 19, Vite 6, Tailwind CSS 4, TypeScript, Motion, Lucide Icons
 - **Desktop**: Tauri 2 (Rust backend + WebView nativa)
-- **API**: Google Gemini (`@google/genai`)
+

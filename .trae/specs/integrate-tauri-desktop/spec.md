@@ -8,7 +8,6 @@ Transformar o projeto "Prática Deliberada" (frontend React + Vite existente) em
 - Configuração do `tauri.conf.json` para servir os artefatos de build do Vite (`dist/`)
 - Novos scripts no `package.json` para execução (`tauri dev`) e build (`tauri build`) do desktop
 - Adaptação do `index.html` para incluir metadados de Content Security Policy compatíveis com Tauri
-- Suporte a variáveis de ambiente (`GEMINI_API_KEY`) no contexto Tauri
 - Atualização do `.gitignore` para ignorar diretórios de build do Tauri
 - Documentação atualizada com instruções para ambos os fluxos (web e desktop)
 - **BREAKING**: Nenhuma — todos os scripts e fluxos existentes permanecem inalterados
@@ -58,19 +57,12 @@ O sistema SHALL manter todo o código relacionado ao Tauri (Rust, configuraçõe
 - **WHEN** um desenvolvedor inspeciona o diretório raiz do projeto
 - **THEN** o diretório `src-tauri/` contém exclusivamente código Rust, configuração do Tauri e recursos de empacotamento, sem nenhum arquivo do frontend
 
-### Requirement: Suporte a Variáveis de Ambiente no Desktop
-O sistema SHALL tornar `GEMINI_API_KEY` disponível no contexto do aplicativo desktop Tauri.
-
-#### Scenario: API key disponível no desktop
-- **WHEN** o aplicativo desktop Tauri é executado
-- **THEN** a variável `GEMINI_API_KEY` está acessível para chamadas à API Gemini via `@google/genai`
-
 ### Requirement: Content Security Policy Compatível
 O sistema SHALL configurar o `index.html` com uma CSP que permita tanto a execução web tradicional quanto dentro da WebView do Tauri.
 
 #### Scenario: CSP no ambiente Tauri
 - **WHEN** o frontend é carregado na WebView do Tauri
-- **THEN** scripts inline, estilos e conexões à API Gemini funcionam sem bloqueios de CSP
+- **THEN** scripts inline e estilos funcionam sem bloqueios de CSP
 
 ## MODIFIED Requirements
 Nenhuma — todas as funcionalidades existentes são preservadas sem modificação.

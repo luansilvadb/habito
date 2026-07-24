@@ -2,5 +2,5 @@
   "name": "Prática Deliberada",
   "description": "Sistema de indução comportamental de atrito zero para prática focada em jogos competitivos.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

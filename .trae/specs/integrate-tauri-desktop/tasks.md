@@ -1,7 +1,7 @@
 # Tasks
 
 - [x] Task 1: Mapeamento e análise do projeto existente
-  - [x] Verificar dependências externas e APIs consumidas (Gemini, etc.)
+  - [x] Verificar dependências externas e APIs consumidas
   - [x] Identificar uso de APIs web (localStorage, crypto, etc.) e compatibilidade com WebView
   - [x] Mapear recursos estáticos e assets
   - [x] Verificar configurações de build (Vite) e rotas
@@ -22,8 +22,8 @@
   - [x] Garantir que a CSP não quebre o funcionamento como app web tradicional
 
 - [x] Task 5: Configuração de variáveis de ambiente no Tauri
-  - [x] Configurar o Tauri para expor `GEMINI_API_KEY` (via build-time Vite env vars)
-  - [x] Garantir que o frontend acessa a variável tanto no modo web quanto desktop
+  - [x] Configurar o Tauri para expor variáveis de ambiente (via build-time Vite env vars)
+  - [x] Garantir que o frontend acessa variáveis tanto no modo web quanto desktop
 
 - [x] Task 6: Atualização de arquivos de projeto
   - [x] Atualizar `.gitignore` com entradas para `src-tauri/target/` e builds Tauri
@@ -38,7 +38,6 @@
   - [x] Verificar registro de feedback (Mantive/Quebrei)
   - [x] Verificar toggle dark/light mode
   - [x] Verificar persistência de dados via localStorage na WebView
-  - [x] Verificar chamadas à API Gemini no contexto desktop
 
 - [x] Task 8: Documentação e organização
   - [x] Atualizar documentação com instruções para desenvolvimento web vs desktop

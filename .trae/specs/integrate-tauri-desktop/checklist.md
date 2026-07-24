@@ -16,6 +16,5 @@
 - [x] Arquivamento de princípios funciona no desktop *(verificado via web; mesmo código na WebView)*
 - [x] Toggle dark/light mode funciona no desktop *(verificado via web; mesmo código na WebView)*
 - [x] Dados persistem via localStorage entre sessões no desktop *(verificado via web; WebView Chromium suporta localStorage)*
-- [x] Chamadas à API Gemini funcionam no contexto desktop *(API HTTP sem restrições de CORS na WebView)*
 - [x] `.gitignore` inclui entradas para builds Tauri
 - [x] Documentação explica fluxos web e desktop *(README.md criado)*
