@@ -1,6 +1,6 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nicedoc/node-tao/refs/heads/master/packages/tauri-conf-schema/schema.json",
-  "productName": "Prática Deliberada",
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "habito",
   "version": "0.1.0",
   "identifier": "com.habito.pratica-deliberada",
   "build": {
@@ -14,7 +14,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Prática Deliberada",
+        "title": "Habito",
         "width": 1200,
         "height": 800,
         "minWidth": 800,
