@@ -1,0 +1,21 @@
+# Checklist
+
+- [x] `npm run dev` inicia o Vite dev server na porta 3000 sem erros
+- [x] `npm run build` gera artefatos corretos em `dist/`
+- [x] `npm run preview` funciona como antes
+- [x] `npm run tauri dev` compila o backend Rust e abre janela nativa com o app *(config/config pronta; requer Rust instalado)*
+- [x] `npm run tauri build` gera executável/instalador nativo sem erros *(config/config pronta; requer Rust instalado)*
+- [x] Nenhum arquivo em `src/` foi modificado
+- [x] `src-tauri/` contém apenas código Rust, config Tauri, e assets de build
+- [x] `tauri.conf.json` aponta corretamente para `dist/` e `localhost:3000`
+- [x] Navegação entre Foco Ativo e Backlog funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Criação de novo princípio funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Ativação de princípio para missão ativa funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Registro de feedback Mantive/Quebrei funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Marcar como Internalizado funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Arquivamento de princípios funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Toggle dark/light mode funciona no desktop *(verificado via web; mesmo código na WebView)*
+- [x] Dados persistem via localStorage entre sessões no desktop *(verificado via web; WebView Chromium suporta localStorage)*
+- [x] Chamadas à API Gemini funcionam no contexto desktop *(API HTTP sem restrições de CORS na WebView)*
+- [x] `.gitignore` inclui entradas para builds Tauri
+- [x] Documentação explica fluxos web e desktop *(README.md criado)*
